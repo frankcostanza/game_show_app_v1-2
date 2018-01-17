@@ -77,10 +77,15 @@ function checkWin() {
 }
 
 
-
+// checks if the letter of the button was found
+/**
+ *
+ * @param {EventTarget} button - the element that was clicked on the keyboard
+ * @returns {boolean} returns if the letter was found or not
+ */
 function checkLetter(button) {
     const pressedLetter = button.textContent.toUpperCase();
-
+    console.log(`the letter %o was pressed`, pressedLetter);
 
 
     const wordSplitLetter = document.getElementsByClassName("letter");
