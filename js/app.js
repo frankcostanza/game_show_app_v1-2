@@ -1,7 +1,7 @@
 var qwerty = document.getElementById('qwerty');
 var phrase = document.getElementById('phrase');
 var missed = 0;
-var phrases = ['Hallo Wusel'];
+var phrases = ['Pearl Jam', 'Rolling Stones', 'Alice in Chains', 'Stone Temple Pilots', 'Iron Maiden']; 
 var startButton = document.getElementById('los');
 var overlay = document.getElementById('overlay');
 var ul = document.getElementById('wordGuess');
@@ -77,10 +77,15 @@ function checkWin() {
 }
 
 
-
+// checks if the letter of the button was found
+/**
+ *
+ * @param {EventTarget} button - the element that was clicked on the keyboard
+ * @returns {boolean} returns if the letter was found or not
+ */
 function checkLetter(button) {
     const pressedLetter = button.textContent.toUpperCase();
-
+    console.log(`the letter %o was pressed`, pressedLetter);
 
 
     const wordSplitLetter = document.getElementsByClassName("letter");
